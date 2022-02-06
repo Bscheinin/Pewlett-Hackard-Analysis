@@ -31,3 +31,21 @@ INTO retiring_titles
 FROM unique_titles as ut
 GROUP BY title
 ORDER BY (count) DESC;
+
+--Mentorship work
+--Retrieve employees 
+SELECT e.emp_no, 
+	e.first_name, 
+	e.last_name,
+	e.birth_date,
+	de.from_date,
+	de.to_date, 
+	tt.title
+INTO mentor_emp
+FROM employees as e
+	INNER JOIN dept_emp as de
+		ON (de.emp_no = e.emp_no)
+	INNER JOIN titles_cleaned as tt	
+		ON (e.emp_no = tt.emp_no)
+WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+ORDER BY emp_no;
