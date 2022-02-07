@@ -7,7 +7,8 @@ The data analysis done for the Pewlett-Hackard corporation used SQL to build que
 - Pewlett-Hackard provided 499,998 employee records to analyze. 
 - Of these nearly 500,000 employees, around 10% (52,158 employees) of them are nearing retirement age. 
 - The distribution of titles of these employees nearing retirement age are shown below:
-!(
+
+![Number of Titles Retiring](https://github.com/Bscheinin/Pewlett-Hackard-Analysis/blob/main/Data/number_of_titles_retiring.PNG)
 
 - Mentorship could be a way to prepare the next generation of employees as there are nearly 72,000 employees eligible to be mentors.
 
