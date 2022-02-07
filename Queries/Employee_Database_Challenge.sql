@@ -27,7 +27,7 @@ ORDER BY emp_no;
 
 -- Title counts
 SELECT COUNT(ut.title), ut.title 
-INTO retiring_titles
+--INTO retiring_titles
 FROM unique_titles as ut
 GROUP BY title
 ORDER BY (count) DESC;
@@ -48,4 +48,5 @@ FROM employees as e
 	INNER JOIN titles_cleaned as tt	
 		ON (e.emp_no = tt.emp_no)
 WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+	AND de.to_date = ('9999-01-01')
 ORDER BY emp_no;
